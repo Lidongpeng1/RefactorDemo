@@ -6,6 +6,18 @@ public class GildedRose {
         this.items = items;
     }
 
+    private boolean isNameAgedBrie(Item item){
+        return item.name.equals("Aged Brie");
+    }
+
+    private boolean isNameBackstagePassesToATAFKAL80ETCConcert(Item item) {
+        return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
+    }
+
+    private boolean isNameSulfurasHandRagnaros(Item item) {
+        return item.name.equals("Sulfuras, Hand of Ragnaros");
+    }
+
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             if (!items[i].name.equals("Aged Brie")
