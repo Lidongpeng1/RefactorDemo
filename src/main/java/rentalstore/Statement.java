@@ -4,7 +4,7 @@ public abstract class Statement {
     public String statement(rentalstore.Customer customer) {
         String result = getHeader(customer);
         for (Rental each : customer.getRentals()) {
-            result = getEachLine(result, each);
+            result = getEachLine(each,result);
         }
         result = getFooter(customer, result);
         return result;
@@ -12,7 +12,7 @@ public abstract class Statement {
 
     protected abstract String getFooter(Customer customer, String result);
 
-    protected abstract String getEachLine(String result, Rental each);
+    protected abstract String getEachLine(Rental each, String result);
 
     protected abstract String getHeader(Customer customer);
 

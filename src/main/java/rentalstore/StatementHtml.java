@@ -8,7 +8,7 @@ public class StatementHtml extends Statement {
         return result;
     }
 
-    protected String getEachLine(String result, Rental each) {
+    protected String getEachLine(Rental each,String result) {
         result += "&nbsp;&nbsp;&nbsp;&nbsp;" + each.getMovie().getTitle() + "&nbsp;" + each.getThisAmount() + "<br>";
         return result;
     }

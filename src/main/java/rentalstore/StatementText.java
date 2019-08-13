@@ -8,7 +8,7 @@ public class StatementText extends Statement {
         return result;
     }
 
-    protected String getEachLine(String result, Rental each) {
+    protected String getEachLine(Rental each,String result) {
         result += "\t" + each.getMovie().getTitle() + "\t" + each.getThisAmount() + "\n";
         return result;
     }
